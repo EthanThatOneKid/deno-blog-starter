@@ -2,6 +2,23 @@
 
 > Static blog project-starter in Deno.
 
+## Blogging 💌
+
+Each of your blog posts are represented by a markdown file (file with the `.md` extension).
+Your blog posts can have the following frontmatter associated with them:
+
+```yaml
+---
+title: Your Title Here
+date: Date
+description: Your description here.
+published: false # Change to true to include this blog-post.
+---
+
+```
+
+The rest of the content in the blog-post file is written in [Markdown][markdown_definition].
+
 ## Usage 🐱‍🐉
 
 To develop, it is suggested to [install Deno][deno_installation].
@@ -21,23 +38,6 @@ You can pass your title and description as well:
 To generate the files for your static blog, run the following command:
 
 `deno run --unstable --allow-read --allow-write scripts/build.ts`
-
-## Blogging 💌
-
-Each of your blog posts are represented by a markdown file (file with the `.md` extension).
-Your blog posts can have the following frontmatter associated with them:
-
-```yaml
----
-title: Your Title Here
-date: Date
-description: Your description here.
-published: false # Change to true to include this blog-post.
----
-
-```
-
-The following content of the file is written in [Markdown][markdown_definition].
 
 ## Development 👨‍💻
 
