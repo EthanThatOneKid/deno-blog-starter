@@ -1,5 +1,4 @@
-import { Marked } from "../deps.ts";
-import { expandGlob } from "../deps.ts";
+import { expandGlob, Marked } from "../deps.ts";
 
 const postsGlob = "./posts/**/*.md";
 const exportRoot = "./site/";
@@ -13,6 +12,9 @@ for await (const file of postFiles) {
     const fileContents = await Deno.readFile(file.path);
     const decodedFileContents = decoder.decode(fileContents);
     const { content, meta } = Marked.parse(decodedFileContents);
+    if (!meta.published) {
+      continue;
+    }
     const exportPath = file.path.replace(postsPrefixPattern, exportRoot)
       .replace(postsExtensionPattern, "");
     await Deno.mkdir(exportPath, { recursive: true });
