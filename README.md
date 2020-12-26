@@ -17,7 +17,7 @@ published: false # Change to true to include this blog-post.
 
 ```
 
-The rest of the content in the blog-post file is written in [Markdown][markdown_definition].
+The rest of the contents of the blog-post file are written in [Markdown][markdown_definition].
 
 ## Usage 🐱‍🐉
 
