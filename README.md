@@ -46,6 +46,7 @@ To generate the files for your static blog, run the following command:
 - [ ] Built-in deployment methods...
   - [ ] GitHub Pages
   - [ ] Netlify
+  - [ ] Vercel
 
 ---
 
