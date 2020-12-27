@@ -9,7 +9,12 @@
 Make sure that you have [installed Deno][deno_installation].
 Then, install `deno-blog-starter` by executing the following command:
 
-`deno install --unstable https://deno.land/x/dbs/mod.ts`
+`deno install --unstable --allow-read --allow-write --allow-net https://deno.land/x/dbs/mod.ts`
+
+- Required Permissions:
+  - `--allow-read`: The program needs to read your markdown files.
+  - `--allow-write`: The program needs to generate new files.
+  - `--allow-net`: The program needs this permission to preview the site in the browser.
 
 <details>
 <summary>Create Blog Post ✨</summary>
