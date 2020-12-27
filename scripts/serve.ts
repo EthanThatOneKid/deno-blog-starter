@@ -81,7 +81,7 @@ export const serve = async () => {
 
   app.addEventListener("listen", ({ hostname, port }) => {
     console.log(
-      bold("Start listening on ") + yellow(`http://${hostname}:${port}`),
+      bold("Listening on ") + yellow(`http://${hostname}:${port}/`),
     );
   });
   await app.listen({ hostname: "localhost", port: 8000 });

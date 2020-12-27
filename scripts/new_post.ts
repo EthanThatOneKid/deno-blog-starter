@@ -19,6 +19,7 @@ published: false
 I hope you are having a nice day today!
 `;
   const filename = `./posts/post_${discriminator}.md`;
+  await Deno.mkdir("posts");
   await Deno.writeTextFile(filename, content);
 
   const successMessage = `${colors.green("Generated")} ${

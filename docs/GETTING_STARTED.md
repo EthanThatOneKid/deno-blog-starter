@@ -7,7 +7,7 @@ This is a simple tutorial on how to get moving with `deno-blog-starter`.
 Make sure that you have [installed Deno](https://github.com/denoland/deno_install).
 Then, install `deno-blog-starter` by executing the following command:
 
-`deno install --unstable https://deno.land/x/dbs/mod.ts`
+`deno install --unstable --allow-read --allow-write --allow-net https://deno.land/x/dbs/mod.ts`
 
 ## Create your First Blog-Post ✨
 
@@ -19,7 +19,12 @@ To create your first post, run the following command:
 Expect to see a file of the format `posts/post_#####.md` in the [`posts`](../posts) directory.
 Edit the contents and name of that file to write the most beautiful markdown document of all time.
 
-Rename the file to `my-first-post.md`.
+Rename the file to `my-first-post.md` and make the following edit:
+
+```diff
++ published: true
+- published: false
+```
 
 ## Build your Blog 🧙‍♂️
 
@@ -37,12 +42,12 @@ To preview the site, run the following command:
 
 `dbs --serve`
 
-And now, the blog-post that you renamed is visible at [``]().
+And now, the blog-post that you renamed is visible at http://localhost:8000/my-first-post.
 
 Congratulations!
-You have completed your introduction to the `deno-blog-starter`.
-Consider keeping this badge and placing it in GitHub profile README as a token of appreciation and to show the world that you know how to use `deno-blog-starter`.
-
-Code: `[![deno-blog-starter certification (deno-blog-starter certified)](https://img.shields.io/badge/deno--blog--starter-certified-informational?logo=deno)](https://github.com/EthanThatOneKid/deno-blog-starter)`
+You have completed your introduction to the `deno-blog-starter` project.
+Consider keeping this badge and placing it in your [GitHub profile README](https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme) as a token of appreciation and to show the world that you know how to use `deno-blog-starter`.
 
 [![deno-blog-starter certification (deno-blog-starter certified)](https://img.shields.io/badge/deno--blog--starter-certified-informational?logo=deno)](https://github.com/EthanThatOneKid/deno-blog-starter)
+
+Code: `[![deno-blog-starter certification (deno-blog-starter certified)](https://img.shields.io/badge/deno--blog--starter-certified-informational?logo=deno)](https://github.com/EthanThatOneKid/deno-blog-starter)`

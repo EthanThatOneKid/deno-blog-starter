@@ -12,7 +12,9 @@ export const build = async (
   const postsExtensionPattern = /\.md$/gi;
   const postFiles = expandGlob(postsGlob); // https://deno.land/std/fs/README.md#expandglob
   const decoder = new TextDecoder();
-
+  try {
+    await Deno.remove(exportRoot, { recursive: true });
+  } catch {}
   for await (const file of postFiles) {
     if (file.isFile) {
       const fileContents = await Deno.readFile(file.path);
