@@ -23,32 +23,36 @@ The rest of the contents of the blog-post file are written in [Markdown][markdow
 
 Make sure that you have [installed Deno][deno_installation].
 
-### Create Blog Post
+<details>
+  <summary>
+  
+  ### Create Blog Post
+</summary>
 
 To create a new blog post, run the following command.
-You can pass your title and description as well, but they are not required.
+
+> 💡 You can pass your title and description as well, but they are not required.
 
 `dbs --new-post -t "Your Title" -d "Your description."`
 
 <details>
-  <summary>
-    Or run as an individual script.
-  </summary>
+  <summary>Or run as an individual script.</summary>
 
 `deno run --unstable --allow-write --allow-read scripts/new_post.ts -t "Your Title" -d "Your description."`.
 
 </details>
 
 <details>
-  <summary>
-    Or run via the API.
-  </summary>
+  <summary>Or run via the API.</summary>
 
 ```ts
 import { newPost } from "https://deno.land/x/dbs/mod.ts";
+const title = "Your Title",
+  description = "Your description.";
 await newPost(title, description);
 ```
 
+</details>
 </details>
 
 ### Generate Blog
