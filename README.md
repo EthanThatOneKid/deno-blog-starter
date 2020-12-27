@@ -25,15 +25,8 @@ Make sure that you have [installed Deno][deno_installation].
 
 ### Create Blog Post
 
-To create a new blog post, run the following command:
-
-`dbs --new-post`
-
-Or
-
-`deno run --unstable --allow-write --allow-read scripts/new_post.ts`.
-
-You can pass your title and description as well:
+To create a new blog post, run the following command.
+You can pass your title and description as well, but they are not required.
 
 `dbs --new-post -t "Your Title" -d "Your description."`
 
@@ -41,21 +34,21 @@ You can pass your title and description as well:
   <summary>
     Or run as an individual script.
   </summary>
----
+
 `deno run --unstable --allow-write --allow-read scripts/new_post.ts -t "Your Title" -d "Your description."`.
----
+
 </details>
 
 <details>
   <summary>
     Or run via the API.
   </summary>
----
+
 ```ts
 import { newPost } from "https://deno.land/x/dbs/mod.ts";
 await newPost(title, description);
 ```
----
+
 </details>
 
 ### Generate Blog
@@ -88,6 +81,11 @@ To add a custom stylesheet, run the following command:
 You can pass the title of your custom stylesheet as well.
 
 `deno run --unstable --allow-read --allow-write scripts/new_style.ts -t YOUR_STYLE_TITLE`
+
+### Dealing with Future Updates
+
+You may have cloned the `deno-blog-starter` repository for your blog quite some time ago.
+It is likely that there have been improvements/updates to the base program.
 
 ## Development 👨‍💻
 
