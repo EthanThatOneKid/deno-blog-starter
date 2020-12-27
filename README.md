@@ -22,9 +22,14 @@ The rest of the contents of the blog-post file are written in [Markdown][markdow
 ## Usage 🐱‍🐉
 
 Make sure that you have [installed Deno][deno_installation].
+Then, install `deno-blog-starter`:
+
+`deno install --unstable https://deno.land/x/dbs@1.0.0/mod.ts`
 
 <details>
 <summary>Create Blog Post</summary>
+
+---
 
 To create a new blog post, run the following command.
 
@@ -56,6 +61,8 @@ await newPost(title, description);
 
 <details>
 <summary>Generate Blog</summary>
+
+---
 
 To generate the files for your static blog, run the following command:
 
@@ -90,6 +97,8 @@ await build(stylesheetTitle);
 <details>
 <summary>Preview Blog</summary>
 
+---
+
 To generate the files for your static blog, run the following command:
 
 `dbs --serve`
@@ -119,6 +128,8 @@ await serve();
 <details>
 <summary>Add Custom Stylesheet</summary>
 
+---
+
 To add a custom stylesheet, run the following command:
 
 `dbs --new-style -t "YOUR_STYLE_TITLE"`
@@ -143,6 +154,8 @@ await newStyle(undefined, title);
 
 </details>
 </details>
+
+---
 
 ## Development 👨‍💻
 
