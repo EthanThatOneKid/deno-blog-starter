@@ -99,11 +99,13 @@ await build(stylesheetTitle);
 
 ---
 
-To generate the files for your static blog, run the following command:
+To preview your blog on your machine, run the following command:
 
 `dbs --serve`
 
 > 💡 Visit http://localhost:8000/ to preview your blog.
+
+> 💡 To see your latest changes, remember to re-generate the site.
 
 <details>
 <summary>Or run as an individual script.</summary>
