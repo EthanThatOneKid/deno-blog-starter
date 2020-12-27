@@ -24,10 +24,7 @@ The rest of the contents of the blog-post file are written in [Markdown][markdow
 Make sure that you have [installed Deno][deno_installation].
 
 <details>
-  <summary>
-  
-  ### Create Blog Post
-</summary>
+  <summary>Create Blog Post</summary>
 
 To create a new blog post, run the following command.
 
