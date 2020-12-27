@@ -1,4 +1,4 @@
-# Deno Blog Starter 🦕
+# Deno Blog Starter 💌
 
 > Blog CLI and static blog project-starter in Deno.
 
