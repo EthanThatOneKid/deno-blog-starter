@@ -1,6 +1,6 @@
 # Deno Blog Starter 🦕
 
-> Static blog project-starter in Deno.
+> Blog CLI and Static blog project-starter in Deno.
 
 ## Blogging 💌
 
@@ -21,17 +21,42 @@ The rest of the contents of the blog-post file are written in [Markdown][markdow
 
 ## Usage 🐱‍🐉
 
-To develop, it is suggested to [install Deno][deno_installation].
+Make sure that you have [installed Deno][deno_installation].
 
 ### Create Blog Post
 
 To create a new blog post, run the following command:
 
+`dbs --new-post`
+
+Or
+
 `deno run --unstable --allow-write --allow-read scripts/new_post.ts`.
 
 You can pass your title and description as well:
 
+`dbs --new-post -t "Your Title" -d "Your description."`
+
+<details>
+  <summary>
+    Or run as an individual script.
+  </summary>
+---
 `deno run --unstable --allow-write --allow-read scripts/new_post.ts -t "Your Title" -d "Your description."`.
+---
+</details>
+
+<details>
+  <summary>
+    Or run via the API.
+  </summary>
+---
+```ts
+import { newPost } from "https://deno.land/x/dbs/mod.ts";
+await newPost(title, description);
+```
+---
+</details>
 
 ### Generate Blog
 
