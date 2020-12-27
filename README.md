@@ -27,17 +27,42 @@ To develop, it is suggested to [install Deno][deno_installation].
 
 To create a new blog post, run the following command:
 
-`deno run --unstable --allow-write scripts/new.ts`.
+`deno run --unstable --allow-write --allow-read scripts/new_post.ts`.
 
 You can pass your title and description as well:
 
-`deno run --unstable --allow-write scripts/new.ts -t "Your Title" -d "Your description."`.
+`deno run --unstable --allow-write --allow-read scripts/new_post.ts -t "Your Title" -d "Your description."`.
 
 ### Generate Blog
 
 To generate the files for your static blog, run the following command:
 
 `deno run --unstable --allow-read --allow-write scripts/build.ts`
+
+You can pass the name of your chosen stylesheet.
+You may choose between [`air`](styles/air.ts), [`modest`](styles/modest.ts), [`retro`](styles/retro.ts), or [`splendor`](styles/spendor.ts).
+The `modest` stylesheet is chosen by default.
+_Or_ you may [create a custom stylesheet](#add-custom-stylesheet).
+
+`deno run --unstable --allow-read --allow-write scripts/build.ts -s YOUR_STYLE_TITLE`
+
+### Preview Blog
+
+To preview your blog on your machine, run the following command:
+
+`deno run --allow-read --allow-net --unstable https://deno.land/std/http/file_server.ts site/ -p 8000 --host localhost`
+
+Visit http://localhost:8000/ to preview your blog.
+
+### Add Custom Stylesheet
+
+To add a custom stylesheet, run the following command:
+
+`deno run --unstable --allow-read --allow-write scripts/new_style.ts`
+
+You can pass the title of your custom stylesheet as well.
+
+`deno run --unstable --allow-read --allow-write scripts/new_style.ts -t YOUR_STYLE_TITLE`
 
 ## Development 👨‍💻
 
