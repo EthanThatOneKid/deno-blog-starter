@@ -4,7 +4,7 @@
 
 ## Blogging 💌
 
-Each of your blog posts are represented by a markdown file (file with the `.md` extension).
+Each of your [blog posts](posts) are represented by a markdown file (file with the `.md` extension).
 Your blog posts can have the following frontmatter associated with them:
 
 ```yaml
@@ -27,7 +27,7 @@ Then, install `deno-blog-starter` by executing the following command:
 `deno install --unstable https://deno.land/x/dbs@1.0.0/mod.ts`
 
 <details>
-<summary>Create Blog Post</summary>
+<summary>Create Blog Post ✨</summary>
 
 ---
 
@@ -60,7 +60,7 @@ await newPost(title, description);
 ---
 
 <details>
-<summary>Generate Blog</summary>
+<summary>Generate Blog 🧙‍♂️</summary>
 
 ---
 
@@ -95,7 +95,7 @@ await build(stylesheetTitle);
 ---
 
 <details>
-<summary>Preview Blog</summary>
+<summary>Preview Blog 📡</summary>
 
 ---
 
@@ -128,7 +128,7 @@ await serve();
 ---
 
 <details>
-<summary>Add Custom Stylesheet</summary>
+<summary>Add Custom Stylesheet 💅</summary>
 
 ---
 
@@ -137,6 +137,8 @@ To add a custom stylesheet, run the following command:
 `dbs --new-style -t "YOUR_STYLE_TITLE"`
 
 > 💡 You may pass the title of your custom stylesheet as well.
+
+> 💡 To integrate your custom stylesheet, update the [`styles/YOUR_STYLE_TITLE.ts`](styles) file.
 
 <details>
 <summary>Or run as an individual script.</summary>
@@ -159,18 +161,19 @@ await newStyle(undefined, title);
 
 ---
 
-## Development 👨‍💻
+## Project Fundamentals 👨‍💻
 
-### Goals 🏁
+This project is...
 
-- [ ] Built-in deployment methods...
-  - [ ] GitHub Pages
-  - [ ] Netlify
-  - [ ] Vercel
+1. A [template/starter repository](https://github.com/EthanThatOneKid/deno-blog-starter/generate) on GitHub.
+1. A TypeScript [module](https://deno.land/x/dbs) on `deno.land/x`.
+1. And a CLI (command-line interface).
 
 ---
 
-Created with 💖 by [EthanThatOneKid][creator_url]
+[![Deploy with Vercel](https://vercel.com/button "Import this project on Vercel!")](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2FEthanThatOneKid%2Fdeno-blog-starter%2F)
+
+Created with 🦕 by [EthanThatOneKid][creator_url]
 
 [creator_url]: https://github.com/EthanThatOneKid/
 [deno_installation]: https://github.com/denoland/deno_install
