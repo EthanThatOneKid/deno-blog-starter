@@ -132,6 +132,8 @@ await serve();
 
 ---
 
+This operation _currently_ only works when you are using this project as a [template][template].
+
 To add a custom stylesheet, run the following command:
 
 `dbs --new-style -t "YOUR_STYLE_TITLE"`
@@ -165,7 +167,7 @@ await newStyle(undefined, title);
 
 This project is...
 
-1. A [template/starter repository](https://github.com/EthanThatOneKid/deno-blog-starter/generate) on GitHub.
+1. A [template/starter repository][template] on GitHub.
 1. A TypeScript [module](https://deno.land/x/dbs) on `deno.land/x`.
 1. And a CLI (command-line interface).
 
@@ -175,8 +177,9 @@ This project is...
 
 [![Deploy with Vercel](https://vercel.com/button "Import this project on Vercel!")](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2FEthanThatOneKid%2Fdeno-blog-starter%2F)
 
-Created with 🦕 by [EthanThatOneKid][creator_url]
+Created with 💌 by [EthanThatOneKid][creator_url]
 
 [creator_url]: https://github.com/EthanThatOneKid/
 [deno_installation]: https://github.com/denoland/deno_install
 [markdown_definition]: https://commonmark.org/help/
+[template]: https://github.com/EthanThatOneKid/deno-blog-starter/generate
