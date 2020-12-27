@@ -24,23 +24,23 @@ The rest of the contents of the blog-post file are written in [Markdown][markdow
 Make sure that you have [installed Deno][deno_installation].
 
 <details>
-  <summary>Create Blog Post</summary>
+<summary>Create Blog Post</summary>
 
 To create a new blog post, run the following command.
 
-> 💡 You can pass your title and description as well, but they are not required.
-
 `dbs --new-post -t "Your Title" -d "Your description."`
 
+> 💡 You can pass your title and description as well, but they are not required.
+
 <details>
-  <summary>Or run as an individual script.</summary>
+<summary>Or run as an individual script.</summary>
 
 `deno run --unstable --allow-write --allow-read scripts/new_post.ts -t "Your Title" -d "Your description."`.
 
 </details>
 
 <details>
-  <summary>Or run via the API.</summary>
+<summary>Or run via the API.</summary>
 
 ```ts
 import { newPost } from "https://deno.land/x/dbs/mod.ts";
@@ -52,41 +52,97 @@ await newPost(title, description);
 </details>
 </details>
 
-### Generate Blog
+---
+
+<details>
+<summary>Generate Blog</summary>
 
 To generate the files for your static blog, run the following command:
 
-`deno run --unstable --allow-read --allow-write scripts/build.ts`
+`dbs --build -s "chosen_stylesheet"`
 
-You can pass the name of your chosen stylesheet.
-You may choose between [`air`](styles/air.ts), [`modest`](styles/modest.ts), [`retro`](styles/retro.ts), or [`splendor`](styles/spendor.ts).
-The `modest` stylesheet is chosen by default.
-_Or_ you may [create a custom stylesheet](#add-custom-stylesheet).
+> You can pass the name of your chosen stylesheet.
+> You may choose between [`air`](styles/air.ts), [`modest`](styles/modest.ts), [`retro`](styles/retro.ts), or [`splendor`](styles/spendor.ts).
+> The `modest` stylesheet is chosen by default.
+> _Or_ you may [create a custom stylesheet](#add-custom-stylesheet).
+
+<details>
+<summary>Or run as an individual script.</summary>
 
 `deno run --unstable --allow-read --allow-write scripts/build.ts -s YOUR_STYLE_TITLE`
 
-### Preview Blog
+</details>
 
-To preview your blog on your machine, run the following command:
+<details>
+<summary>Or run via the API.</summary>
 
-`deno run --allow-read --allow-net --unstable https://deno.land/std/http/file_server.ts site/ -p 8000 --host localhost`
+```ts
+import { build } from "https://deno.land/x/dbs/mod.ts";
+const stylesheetTitle = "modest"; // Replace `modest` with your chosen stylesheet's title.
+await build(stylesheetTitle);
+```
 
-Visit http://localhost:8000/ to preview your blog.
+</details>
+</details>
 
-### Add Custom Stylesheet
+---
+
+<details>
+<summary>Preview Blog</summary>
+
+To generate the files for your static blog, run the following command:
+
+`dbs --serve`
+
+> 💡 Visit http://localhost:8000/ to preview your blog.
+
+<details>
+<summary>Or run as an individual script.</summary>
+
+`deno run --allow-read --allow-net --unstable scripts/serve.ts`
+
+</details>
+
+<details>
+<summary>Or run via the API.</summary>
+
+```ts
+import { serve } from "https://deno.land/x/dbs/mod.ts";
+await serve();
+```
+
+</details>
+</details>
+
+---
+
+<details>
+<summary>Add Custom Stylesheet</summary>
 
 To add a custom stylesheet, run the following command:
 
-`deno run --unstable --allow-read --allow-write scripts/new_style.ts`
+`dbs --new-style -t "YOUR_STYLE_TITLE"`
 
-You can pass the title of your custom stylesheet as well.
+> 💡 You may pass the title of your custom stylesheet as well.
 
-`deno run --unstable --allow-read --allow-write scripts/new_style.ts -t YOUR_STYLE_TITLE`
+<details>
+<summary>Or run as an individual script.</summary>
 
-### Dealing with Future Updates
+`deno run --unstable --allow-read --allow-write scripts/new_style.ts -t "YOUR_STYLE_TITLE"`
 
-You may have cloned the `deno-blog-starter` repository for your blog quite some time ago.
-It is likely that there have been improvements/updates to the base program.
+</details>
+
+<details>
+<summary>Or run via the API.</summary>
+
+```ts
+import { newStyle } from "https://deno.land/x/dbs/mod.ts";
+const title = "new_stylesheet_title";
+await newStyle(undefined, title);
+```
+
+</details>
+</details>
 
 ## Development 👨‍💻
 

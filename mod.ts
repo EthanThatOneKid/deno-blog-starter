@@ -1,8 +1,8 @@
 import { colors, parseFlags } from "./deps.ts";
-export { build } from "./scripts/build.ts";
-export { newPost } from "./scripts/new_post.ts";
-export { newStyle } from "./scripts/new_style.ts";
-export { serve } from "./scripts/serve.ts";
+import { build } from "./scripts/build.ts";
+import { newPost } from "./scripts/new_post.ts";
+import { newStyle } from "./scripts/new_style.ts";
+import { serve } from "./scripts/serve.ts";
 
 export interface DenoBlogStarterSettings {
   "new-post"?: boolean;
@@ -11,20 +11,20 @@ export interface DenoBlogStarterSettings {
   "build"?: boolean;
   "help"?: boolean;
 
-  title?: string;
-  description?: string;
-  stylesheetTitle?: string;
+  t?: string; // title
+  d?: string; // description
+  s?: string; // stylesheetTitle
 }
 
 export const main = async (settings: DenoBlogStarterSettings) => {
   if ("new-post" in settings) {
-    await newPost(settings.title, settings.description);
+    await newPost(settings.t, settings.d);
   } else if ("new-style" in settings) {
-    await newStyle(undefined, settings.title);
+    await newStyle(undefined, settings.t);
   } else if ("serve" in settings) {
     await serve();
   } else if ("build" in settings) {
-    await build(settings.stylesheetTitle);
+    await build(settings.s);
   } else if ("help" in settings) {
     console.log(`
 +------------------------+
@@ -59,3 +59,4 @@ if (import.meta.main) {
 }
 
 export default main;
+export { build, newPost, newStyle, serve };
