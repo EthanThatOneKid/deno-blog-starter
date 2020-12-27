@@ -21,6 +21,8 @@ The rest of the contents of the blog-post file are written in [Markdown][markdow
 
 ## Usage 🐱‍🐉
 
+> 💡 For a simple tutorial, check out the [Getting Started](docs/GETTING_STARTED) document.
+
 Make sure that you have [installed Deno][deno_installation].
 Then, install `deno-blog-starter` by executing the following command:
 
