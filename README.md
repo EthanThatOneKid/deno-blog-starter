@@ -1,6 +1,6 @@
 # Deno Blog Starter 🦕
 
-> Blog CLI and Static blog project-starter in Deno.
+> Blog CLI and static blog project-starter in Deno.
 
 ## Blogging 💌
 
@@ -22,7 +22,7 @@ The rest of the contents of the blog-post file are written in [Markdown][markdow
 ## Usage 🐱‍🐉
 
 Make sure that you have [installed Deno][deno_installation].
-Then, install `deno-blog-starter`:
+Then, install `deno-blog-starter` by executing the following command:
 
 `deno install --unstable https://deno.land/x/dbs@1.0.0/mod.ts`
 
