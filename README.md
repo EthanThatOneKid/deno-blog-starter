@@ -2,23 +2,6 @@
 
 > Blog CLI and static blog project-starter in Deno.
 
-## Blogging 💌
-
-Each of your [blog posts](posts) are represented by a markdown file (file with the `.md` extension).
-Your blog posts can have the following frontmatter associated with them:
-
-```yaml
----
-title: Your Title Here
-date: Date
-description: Your description here.
-published: false # Change to true to include this blog-post.
----
-
-```
-
-The rest of the contents of the blog-post file are written in [Markdown][markdown_definition].
-
 ## Usage 🐱‍🐉
 
 > 💡 For a simple tutorial, check out the [Getting Started](docs/GETTING_STARTED.md) document.
@@ -38,6 +21,21 @@ To create a new blog post, run the following command.
 `dbs --new-post -t "Your Title" -d "Your description."`
 
 > 💡 You can pass your title and description as well, but they are not required.
+
+Each of your [blog posts](posts) are represented by a markdown file (file with the `.md` extension).
+Your blog posts can have the following frontmatter associated with them:
+
+```yaml
+---
+title: Your Title Here
+date: Date
+description: Your description here.
+published: false # Change to true to include this blog-post.
+---
+
+```
+
+The rest of the contents of the blog-post file are written in [Markdown][markdown_definition].
 
 <details>
 <summary>Or run as an individual script.</summary>
