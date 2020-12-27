@@ -16,12 +16,6 @@ Then, install `deno-blog-starter` by executing the following command:
 
 ---
 
-To create a new blog post, run the following command.
-
-`dbs --new-post -t "Your Title" -d "Your description."`
-
-> 💡 You can pass your title and description as well, but they are not required.
-
 Each of your [blog posts](posts) are represented by a markdown file (file with the `.md` extension).
 Your blog posts can have the following frontmatter associated with them:
 
@@ -34,6 +28,12 @@ published: false # Change to true to include this blog-post.
 ---
 
 ```
+
+To create a new blog post, run the following command.
+
+`dbs --new-post -t "Your Title" -d "Your description."`
+
+> 💡 You can pass your title and description as well, but they are not required.
 
 The rest of the contents of the blog-post file are written in [Markdown][markdown_definition].
 
