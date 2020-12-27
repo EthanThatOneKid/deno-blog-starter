@@ -24,7 +24,7 @@ The rest of the contents of the blog-post file are written in [Markdown][markdow
 Make sure that you have [installed Deno][deno_installation].
 Then, install `deno-blog-starter` by executing the following command:
 
-`deno install --unstable https://deno.land/x/dbs@1.0.0/mod.ts`
+`deno install --unstable https://deno.land/x/dbs/mod.ts`
 
 <details>
 <summary>Create Blog Post ✨</summary>
@@ -168,6 +168,8 @@ This project is...
 1. A [template/starter repository](https://github.com/EthanThatOneKid/deno-blog-starter/generate) on GitHub.
 1. A TypeScript [module](https://deno.land/x/dbs) on `deno.land/x`.
 1. And a CLI (command-line interface).
+
+> Final thoughts: This project is not limited to blogging; any directory of loosely organized markdown files will work seamlessly with the `deno-blog-starter` project (such as documentation).
 
 ---
 
