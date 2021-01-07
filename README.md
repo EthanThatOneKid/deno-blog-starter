@@ -74,7 +74,7 @@ To generate the files for your static blog, run the following command:
 `dbs --build -s "chosen_stylesheet"`
 
 > You can pass the name of your chosen stylesheet.
-> You may choose between [`air`](styles/air.ts), [`modest`](styles/modest.ts), [`retro`](styles/retro.ts), or [`splendor`](styles/spendor.ts).
+> You may choose between [`air`](styles/air.ts), [`modest`](styles/modest.ts), [`retro`](styles/retro.ts), or [`splendor`](styles/splendor.ts).
 > The `modest` stylesheet is chosen by default.
 > _Or_ you may [create a custom stylesheet](#add-custom-stylesheet).
 
