@@ -8,7 +8,9 @@ import {
 import { Application, colors, HttpError, Status } from "../deps.ts";
 const {} = colors;
 
-export const serve = async () => {
+export const serve = async (
+  staticFolder: string = "site/",
+) => {
   const app = new Application();
 
   // Error handler middleware
@@ -74,7 +76,7 @@ export const serve = async () => {
   // Send static content
   app.use(async (context) => {
     await context.send({
-      root: "site/",
+      root: staticFolder,
       index: "index.html",
     });
   });
